@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/birthday.css' %}">
+{% endblock %}
+
+
+{% block js_block %}
+    <script src="{% static 'js/key.js' %}"></script>
+    <script src="{% static 'js/birthday.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                {% include 'search.html' %}
+            </div>
+
+
+            
+            <!-- Submitting image to Api to predict tag accociated with images -->
+            <div class="col-sm-5">
+                <div class="image_submit_preview">
+                    <div class="col-sm-12">
+                        <!-- Image url input -->
+
+                      <!--   <form method="post" id='input_data' action="#" enctype="multipart/form-data" class="form-inline" role="form">
+                        {% csrf_token %} 
+                            <div class="form-group{% if form.image.errors %} has-error{% endif %}">
+                                <label for="username">{% trans 'Upload Image' %}</label>
+                                <input type="file"  id="imageUrl" name="imageUrl"/>
+                                {% for error in form.username.errors %}
+                                    <label class="control-label">{{ error }}</label>
+                                {% endfor %}
+                            </div> -->
+
+                       <div class="form-group">
+                            <label for="image">{% trans 'Enter Image Url here ' %}</label>
+                            <input class="form-control" type="text" id="imageUrl" placeholder="Enter image url here" name="imageUrl">
+                        </div>
+                            <div class="form-group">
+                                <button id="submitBtn" class="btn btn-warning"><span class="glyphicon glyphicon-upload"></span>&nbsp;&nbsp;Submit Image</button>
+                            </div>
+                    
+                    </div>
+
+                    <!-- Image Preview -->
+                    <h2>Image Preview</h2>
+                    <img class="img-responsive" id="image" src="//i.imgur.com/O5RzPOu.png" alt="preview image">
+
+                </div>
+                <div class="tags-container" style="display:none;">
+                    <div class="col-sm-12">
+                        <legend><span class="label label-primary">Associated Tags</span></legend>
+                        <div class="well">
+                            <div class="row ">
+                                <div class="col-sm-12 tags">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+    </div>
+    
+{% endblock %}

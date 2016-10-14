@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<div class="container-fixed">
+	<div class="row">
+		<div class="col-sm-8">
+			<div class="search-container">
+            	<div class="search-form">
+                  	<input class="input-search" id="input_search" ng-model="query" type="text" value="" autofocus placeholder="Search by(tag)"  required="">
+               
+                  	<button typee="submit" onclick = "SearchRepo()" class="button-search"><img class="image-search" src="{% static 'images/search.png' %}"></button>
+            	</div>
+        	</div>
+		</div>
+
+	</div>
+
+	<div id="results">
+		<em>When Images are found, they will be displayed here.</em>
+	</div>
+</div>
+

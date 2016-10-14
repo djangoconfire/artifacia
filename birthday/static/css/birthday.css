@@ -1,0 +1,43 @@
+.image_submit_preview{
+	margin-top:80px;
+}
+
+.tags-container{
+	margin-top:30px;
+}
+
+/* stylilng search bar */
+
+.search-container{
+	margin-top:80px;
+}
+
+.search-container .search-form {
+    background-color: #ffffff;
+    border:1px solid #ccc;
+    width: 400px;
+    height: 35px;
+    margin-left:40px;
+    border-radius: 4px;
+}
+
+.search-container .search-form .input-search {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 9px;
+    color:purple;
+}
+
+
+.search-container .search-form .button-search {
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+
+.search-container .search-form .button-search .image-search {
+    width: 20px;
+    height: 20px;
+}

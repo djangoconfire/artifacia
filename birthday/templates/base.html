@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Birthday Party</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{% static 'css/birthday.css' %}">
+		
+		<!-- Custom css -->
+		{% block head %}
+		{% endblock %}
+	</head>
+	<body>
+
+		<div class="navbar navbar-default navbar-fixed-top" style = "background-color:#0c0016;">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" href="">Birthday Party</a>
+				</div>
+			</div>
+		</div>		
+
+
+		{% block content %}
+
+		{% endblock %}	
+		
+		<!-- Third Party js-->
+		<script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://sdk.clarifai.com/js/clarifai-1.2.1.js"></script>
+
+		<!-- Third Party Angularjs Library -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.js"></script>
+    	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js" ng-module="ui.bootstrap"></script>
+    	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-route.js"></script>
+
+		<!-- Custom js-->
+
+		{% block js_block %}
+		{% endblock %}
+		
+		
+	</body>
+</html>

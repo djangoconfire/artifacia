@@ -1,0 +1,32 @@
+Description of my approach..
+
+
+First i create account on Clarifai where i have got clientid and client secret key.
+
+Then i added these key under key.js file.
+
+create a model to storee image and coresponding tags associated with that image.
+
+create a base.html file.
+
+create a home.html file extending base.html to render the template
+
+Under birthday.js file 
+   first i select different div element using class and id selector.
+	
+    then i bind eventhandler on clicking the submit button.First one should have to enter the image url in given input field.Then click on submit button.
+
+  On clicking over the submit button image will be submitted to CLarifai Api and predicted tags  generated then i'm returning the tag associated with submitted image.
+
+Now, i'm storing the tags in temporary array and then using ajax request send it to backend.
+
+In backend i'm considering image as key and tags associated with that image as value.
+
+image --> key   ang tags--> value
+
+When someone made a search on the basis of tag then then i made a query over the list of tags and then returnng the keys(image) of matching tags.
+
+Also i've developed api of this project for makiing efficient search functionality using AngulayJs.
+
+
+  
